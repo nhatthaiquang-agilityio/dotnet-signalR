@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<script>
+    function ready() {
+
+     }
+    //random userId between 1 and 10 to demo
+    var userId = Math.floor((Math.random() * 10) + 1);
+    document.addEventListener("DOMContentLoaded", ready)
+ </script>
+
+<div class="container">
+    <div class="row">
+        &nbsp;
+        My User Id is: <span id="userId"></span>
+    </div>
+    <div class="row">
+        <div class="col-6">&nbsp;</div>
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+    <input type="hidden" id="signalRConnectionId" />
+</div>
+<script src="~/lib/signalr/signalr.min.js"></script>
+<script>
+    var connection = new signalR.HubConnectionBuilder().withUrl("/NotificationUserHub?userId=" + userId).build();
+    connection.on("sendToUser", (message) => {
+        var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        var li = document.createElement("li");
+        li.textContent = msg;
+        document.getElementById("messagesList").appendChild(li);
+
+    });
+
+    connection.start().catch(function (err) {
+        return console.error(err.toString());
+    }).then(function () {
+
+        document.getElementById("userId").innerText = userId;
+        connection.invoke('GetConnectionId').then(function (connectionId) {
+            //alert('connectionId is :' + connectionId);
+            document.getElementById('signalRConnectionId').innerHTML = connectionId;
+        })
+    });
+
+</script>

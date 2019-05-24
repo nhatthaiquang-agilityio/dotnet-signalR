@@ -4,8 +4,10 @@ namespace MapUserMVC.Models
 {
     public class UserConnectionManager : IUserConnectionManager
     {
-        private static Dictionary<string, List<string>> userConnectionMap = new Dictionary<string, List<string>>();
-        private static string userConnectionMapLocker = string.Empty;//find away to avoid lock later
+        private static Dictionary<string, List<string>> userConnectionMap = 
+            new Dictionary<string, List<string>>();
+        //find away to avoid lock later
+        private static string userConnectionMapLocker = string.Empty;
 
         public void KeepUserConnection(string userId, string connectionId)
         {

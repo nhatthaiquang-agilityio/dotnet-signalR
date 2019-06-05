@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRSpecificUser", "SignalRSpecificUser.csproj", "{33E52E4C-5AF1-4A4A-A694-175DAF6BEB20}"
 EndProject
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "Test", "Test\Test.csproj", "{B3D082B7-0AE9-4378-97D5-EF9730B57583}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "..\Testing\Testing.csproj", "{A5CC3FFA-0F40-4A76-91E5-99FDA690EF4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +17,13 @@ Global
 		{33E52E4C-5AF1-4A4A-A694-175DAF6BEB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33E52E4C-5AF1-4A4A-A694-175DAF6BEB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33E52E4C-5AF1-4A4A-A694-175DAF6BEB20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3D082B7-0AE9-4378-97D5-EF9730B57583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D082B7-0AE9-4378-97D5-EF9730B57583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D082B7-0AE9-4378-97D5-EF9730B57583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D082B7-0AE9-4378-97D5-EF9730B57583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5CC3FFA-0F40-4A76-91E5-99FDA690EF4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5CC3FFA-0F40-4A76-91E5-99FDA690EF4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5CC3FFA-0F40-4A76-91E5-99FDA690EF4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5CC3FFA-0F40-4A76-91E5-99FDA690EF4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -12,17 +12,5 @@
   <ItemGroup>
     <Folder Include="Hubs\" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Test\UnitTest1.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Test\obj\Test.csproj.nuget.g.props" />
-    <None Remove="Test\obj\Test.csproj.nuget.g.targets" />
-    <None Remove="Test\obj\Test.csproj.nuget.cache" />
-    <None Remove="Test\obj\Debug\netcoreapp2.1\Test.assets.cache" />
-    <None Remove="Test\obj\Debug\netcoreapp2.1\Test.csprojAssemblyReference.cache" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Remove="Test\obj\project.assets.json" />
-  </ItemGroup>
+
 </Project>
